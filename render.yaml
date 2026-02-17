@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: food-item-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false # Set manually in Render dashboard
+      - key: PORT
+        value: 10000
